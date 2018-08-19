@@ -13,31 +13,42 @@
     <br>
     <h1>My Library</h1>
     <br><br>
-    <!--<form th:action="@{/add}" th:object="${book}" method="post">-->
+
+    <form th:action="@{/add}" th:object="${book}" method="post">
+        <input type="hidden" th:field="*{id}"/>
         <div class="form-group row">
             <label for="book-author" class="col-2 col-form-label">Author:</label>
             <div class="col-10">
-                <input class="form-control" type="text" value="Artisanal kale" id="book-author">
+                <input class="form-control"  type="text" th:field="*{author}" placeholder="Stephen King" id="book-author">
             </div>
         </div>
         <div class="form-group row">
             <label for="book-title" class="col-2 col-form-label">Title:</label>
             <div class="col-10">
-                <input class="form-control" type="text" value="Artisanal kale" id="book-title">
+                <input class="form-control"  type="text" th:field="*{title}" placeholder="The greatest book" id="book-title">
             </div>
         </div>
         <div class="form-group row">
             <label for="book-genre" class="col-2 col-form-label">Genre:</label>
             <div class="col-10">
-                <input class="form-control" type="text" value="Artisanal kale" id="book-genre">
+                <input class="form-control" type="text" th:field="*{genre}" placeholder="criminal" id="book-genre">
             </div>
         </div>
         <div class="form-group row">
             <label for="book-year" class="col-2 col-form-label">Release year:</label>
             <div class="col-10">
-                <input class="form-control" type="text" value="Artisanal kale" id="book-year">
+                <input class="form-control" type="text" th:field="*{releaseYear}" placeholder="2018" id="book-year">
             </div>
         </div>
+        <div class="form-group row">
+            <label for="book-plot" class="col-2 col-form-label">Plot desctiption:</label>
+            <div class="col-10">
+                <!--<input class="form-control" type="text" th:field="*{plot}" placeholder="In 1995 a family of..." id="book-plot">-->
+                <textarea th:field="*{plot}" id="book-plot" class="form-control" rows="3" placeholder="In 1995 a family of...">
+                    </textarea>
+            </div>
+        </div>
+        <p><button type="submit" class="btn btn-outline-primary">Dodaj</button></p>
     </form>
 
 </div>

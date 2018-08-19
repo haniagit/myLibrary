@@ -14,7 +14,7 @@ public class Book {
     private String author;
     private String title;
     private String genre;
-    private int release_year;
+    private int releaseYear;
     private String plot;
 
     public String getAuthor() {
@@ -33,12 +33,12 @@ public class Book {
         this.title = title;
     }
 
-    public int getRelease_year() {
-        return release_year;
+    public int getReleaseYear() {
+        return releaseYear;
     }
 
-    public void setRelease_year(int release_year) {
-            this.release_year = release_year;
+    public void setReleaseYear(int release_year) {
+            this.releaseYear = release_year;
     }
 
     public String getGenre() {
@@ -55,5 +55,13 @@ public class Book {
 
     public void setPlot(String plot) {
         this.plot = plot;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 }
