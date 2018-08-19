@@ -1,11 +1,21 @@
 package com.hania.library.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Book {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
     private String author;
     private String title;
-    private int print_year;
     private String genre;
+    private int release_year;
+    private String plot;
 
     public String getAuthor() {
         return author;
@@ -23,12 +33,12 @@ public class Book {
         this.title = title;
     }
 
-    public int getPrint_year() {
-        return print_year;
+    public int getRelease_year() {
+        return release_year;
     }
 
-    public void setPrint_year(int print_year) {
-        this.print_year = print_year;
+    public void setRelease_year(int release_year) {
+            this.release_year = release_year;
     }
 
     public String getGenre() {
@@ -37,5 +47,13 @@ public class Book {
 
     public void setGenre(String genre) {
         this.genre = genre;
+    }
+
+    public String getPlot() {
+        return plot;
+    }
+
+    public void setPlot(String plot) {
+        this.plot = plot;
     }
 }
