@@ -65,4 +65,9 @@ public class Book {
     public void setId(Integer id) {
         this.id = id;
     }
+
+    @Override
+    public String toString() {
+        return getGenre();
+    }
 }

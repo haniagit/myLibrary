@@ -16,7 +16,6 @@
     <table class="table">
     <thead>
     <tr>
-        <th scope="col">ID</th>
         <th scope="col">Author</th>
         <th scope="col">Title</th>
         <th scope="col">Genre</th>
@@ -29,7 +28,6 @@
     </thead>
     <tbody>
     <tr th:each="book : ${books}">
-        <td th:text="${book.id}"></td>
         <td th:text="${book.author}"></td>
         <td th:text="${book.title}"></td>
         <td th:text="${book.genre}"></td>

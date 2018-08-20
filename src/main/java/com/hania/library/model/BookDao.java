@@ -17,4 +17,14 @@ public interface BookDao extends CrudRepository<Book, Integer> {
         return searchedBooks;
     }
 
+    public default List<Book> searchGenre(String q){
+        List<Book> searchedGenres = new ArrayList<>();
+        for(Book book : findAll()){
+            if(book.getGenre().contains(q)){
+                searchedGenres.add(book);
+            }
+        }
+        return searchedGenres;
+    }
+
 }
