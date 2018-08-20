@@ -52,4 +52,10 @@ public class LibraryController {
         bookDao.deleteById(book.getId());
         return "redirect:/books";
     }
+
+    @GetMapping("/search")
+    public String search(ModelMap modelMap, String q){
+        modelMap.put("books", bookDao.searchBook(q));
+        return "/books";
+    }
 }
